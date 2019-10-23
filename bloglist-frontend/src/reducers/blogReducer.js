@@ -39,6 +39,9 @@ export const createBlog = blogObject => {
       type: 'NEW_BLOG',
       data: newBlog
     })
+    // Fetches blogs again to grab info from database
+    // New blog show 'added by Anonymous' is not re-initialized
+    dispatch(initializedBlogs())
   }
 }
 
