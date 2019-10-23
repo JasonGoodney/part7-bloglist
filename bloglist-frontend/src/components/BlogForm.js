@@ -11,18 +11,18 @@ const BlogForm = props => {
         <div>
           <Form.Field inline>
             <label>title</label>
-            <Input name='title' {...titleField} />
+            <Input className='titleInput' name='title' {...titleField} />
           </Form.Field>
           <Form.Field inline>
             <label>author</label>
-            <Input name='author' {...authorField} />
+            <Input className='authorInput' name='author' {...authorField} />
           </Form.Field>
           <Form.Field inline>
             <label>url</label>
-            <Input name='url' {...urlField} />
+            <Input className='urlInput' name='url' {...urlField} />
           </Form.Field>
           <Button primary type='submit'>
-            create
+            save
           </Button>
         </div>
       </Form>

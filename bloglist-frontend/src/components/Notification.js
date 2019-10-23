@@ -29,7 +29,10 @@ const Notification = ({ notification }) => {
   return (
     <div>
       {notification.text ? (
-        <div style={notification.isError ? errorStyle : successStyle}>
+        <div
+          className='notifiction'
+          id='notifiction'
+          style={notification.isError ? errorStyle : successStyle}>
           {notification.text}
         </div>
       ) : (

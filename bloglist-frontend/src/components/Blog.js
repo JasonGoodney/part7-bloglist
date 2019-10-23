@@ -42,7 +42,7 @@ const Blog = props => {
       <div>
         {blog.likes} {blog.likes === 1 ? 'like' : 'likes'}{' '}
         {props.user ? (
-          <Button compact size='mini' onClick={like}>
+          <Button className='likeButton' compact size='mini' onClick={like}>
             like
           </Button>
         ) : (

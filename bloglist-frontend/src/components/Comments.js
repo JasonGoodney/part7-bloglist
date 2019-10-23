@@ -23,12 +23,15 @@ const Comments = props => {
       <Form onSubmit={handleSubmit}>
         <Form.Group>
           <Form.Input
+            id='commentInput'
             name='comment'
             value={comment}
             placeholder='Type a comment...'
             onChange={handleChange}
           />
-          <Form.Button type='submit'>Add comment</Form.Button>
+          <Form.Button disabled={comment === ''} type='submit'>
+            Add comment
+          </Form.Button>
         </Form.Group>
       </Form>
       <ul>
