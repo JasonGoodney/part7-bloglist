@@ -1,0 +1,8 @@
+@id = 5da604bd0130a87399d428b9
+
+PUT http://localhost:3003/api/blogs/{{id}}/comments
+content-type: application/json
+
+{
+	"text": "looking forward to more"
+}
