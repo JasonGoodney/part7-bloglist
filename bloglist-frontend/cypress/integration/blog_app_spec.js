@@ -15,6 +15,14 @@ describe('Blog', function() {
     cy.contains('Blogs')
   })
 
+  it.only('users page can be opened', function() {
+    cy.visit('http://localhost:3000/users')
+    cy.contains('Users')
+    cy.go('back')
+    cy.contains('users').click()
+    cy.contains('Users')
+  })
+
   it('login form can be opened', function() {
     cy.contains('login').click()
   })
@@ -49,7 +57,7 @@ describe('Blog', function() {
       cy.contains('Cypress Blog')
     })
 
-    describe.only('and a blog is created', function() {
+    describe('and a blog is created', function() {
       beforeEach(function() {
         cy.contains('create new').click()
         cy.get('.titleInput').type('Another Cypress Blog')
